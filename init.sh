@@ -10,7 +10,7 @@ read -r -d '' header_content_template <<'EOF'
 EOF
 read -r -d '' test_content_template <<'EOF'
 #include <unity.h>
-#include <NAMEOFUNIT>
+#include <NAMEOFUNIT.h>
 
 void test_NAMEOFUNIT_firstTest(void) {
 
