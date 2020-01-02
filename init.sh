@@ -33,7 +33,7 @@ function create_header_file {
 }
 
 function create_test_file {
-    test_content=$(sed "s/NAMEOFUNIT/$1.h/g" <<< $test_content_template)
+    test_content=$(sed "s/NAMEOFUNIT/$1/g" <<< $test_content_template)
     echo "${test_content}" >> ./tests/$1-test.c
 }
 
