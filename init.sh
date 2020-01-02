@@ -39,7 +39,7 @@ function create_test_file {
 
 function register_test_file {
     # TODO: Make this less hacky
-    echo "\n#include <$1-test.h>" >> ./tests/main-test.c
+    echo "#include <$1-test.h>" >> ./tests/main-test.c
     echo "extern void test_NAMEOFUNIT_firstTest(void);" >> ./tests/main-test.c
 }
 
