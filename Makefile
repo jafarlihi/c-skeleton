@@ -1,4 +1,4 @@
-TARGET:=# TODO: Replace this comment with the name of target. For example: coolapp
+TARGET:=#ProjectNameMarker
 
 SOURCES:=./sources
 INCLUDES:=./includes

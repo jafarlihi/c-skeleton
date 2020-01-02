@@ -1,4 +1,0 @@
-#ifndef NAMEOFUNIT_H
-#define NAMEOFUNIT_H
-
-#endif NAMEOFUNIT_H
