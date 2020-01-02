@@ -20,10 +20,15 @@ function create_module {
     touch ./sources/$1.c
     touch ./tests/$1-test.c
     touch ./includes/$1.h
+    create_source_file $1
     create_header_file $1
     create_test_file $1
     register_test_file $1
     echo "Module named '$1' was created"
+}
+
+function create_source_file {
+    echo "#include \"$1.h\"" >> ./sources/$1.c
 }
 
 function create_header_file {
