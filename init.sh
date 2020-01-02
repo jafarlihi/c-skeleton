@@ -1,12 +1,14 @@
 #!/usr/bin/env bash
 
 makefile_project_name_marker="#ProjectNameMarker"
+
 read -r -d '' header_content_template <<'EOF'
 #ifndef NAMEOFUNIT_H
 #define NAMEOFUNIT_H
 
 #endif NAMEOFUNIT_H
 EOF
+
 read -r -d '' test_content_template <<'EOF'
 #include <unity.h>
 #include <NAMEOFUNIT.h>
@@ -61,10 +63,15 @@ function additional_module_prompt {
     fi
 }
 
-# TODO: Switch on a flag for creation of more modules and initialization
-read -p "Name of project: " project_name
-sed -i "s/$makefile_project_name_marker/$project_name/g" Makefile
-read -p "Name of first module?: " module_name
-create_module $module_name
-additional_module_prompt
+if grep -qF "$makefile_project_name_marker" Makefile
+then
+    read -p "Name of project: " project_name
+    sed -i "s/$makefile_project_name_marker/$project_name/g" Makefile
+    read -p "Name of first module?: " module_name
+    create_module $module_name
+    additional_module_prompt
+else
+    echo "Project is already initialized"
+    additional_module_prompt
+fi
 
