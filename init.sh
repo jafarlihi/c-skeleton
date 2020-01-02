@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 makefile_project_name_marker="#ProjectNameMarker"
-module_name_marker="NAMEOFUNIT"
 read -r -d '' header_content_template <<'EOF'
 #ifndef NAMEOFUNIT_H
 #define NAMEOFUNIT_H
