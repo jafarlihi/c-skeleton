@@ -34,8 +34,8 @@ function create_source_file {
 }
 
 function create_header_file {
-    header_content=$(sed "s/NAMEOFUNIT/$1/g" <<< $header_content_template)
-    echo "${header_content^^}" >> ./includes/$1.h
+    header_content=$(sed "s/NAMEOFUNIT/\U$1/g" <<< $header_content_template)
+    echo "${header_content}" >> ./includes/$1.h
 }
 
 function create_test_file {
