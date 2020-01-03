@@ -15,4 +15,6 @@ Run `make test` to run tests with an optimized build artifact.
 
 Run `make testdbg` to run tests with a debugging build artifact.
 
+Run `make clean` to delete all build artifacts.
+
 [1]: http://www.throwtheswitch.org/unity
