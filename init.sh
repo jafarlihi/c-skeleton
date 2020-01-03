@@ -6,7 +6,7 @@ read -r -d '' header_content_template <<'EOF'
 #ifndef NAMEOFUNIT_H
 #define NAMEOFUNIT_H
 
-#endif NAMEOFUNIT_H
+#endif
 EOF
 
 read -r -d '' test_content_template <<'EOF'
